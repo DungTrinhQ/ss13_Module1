@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FakingTextAreaOnTyping</title>
+    <style>
+        fieldset {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <fieldset>
+        <legend><h3>Type anything slowly</h3></legend>
+        <textarea oninput="fake(id)" id="vb" cols="100" rows="10"></textarea>
+    </fieldset>
+
+    <script>
+        let chu= ['T','Ô','I',' ','L','À',' ','R','O','B','O','T'];
+        let count=0;
+        let t='';
+        function fake(id) {
+            for(i=0;i<chu.length;i++){
+                if (i==count){
+                    t+=chu[count]
+                    count++;
+                    break;
+                }
+                if(count==chu.length){
+                    t='';
+                    count=0
+                }
+                document.getElementById('vb').value=t}
+
+        }
+    </script>
+</center>
+</body>
+</html>

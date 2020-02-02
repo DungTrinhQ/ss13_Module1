@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex3</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng số nguyên.-->
+<!--Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+<script>
+    function max(array) {
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i])
+                max = array[i];
+        }
+        document.write("phan tu lon nhat mang la "+max);
+    }
+    function average(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum +=  eval(array[i]);
+        }
+        console.log(typeof (sum));
+        let average = sum/array.length;
+        document.write("Trung binh cac phan tu la "+ average);
+    }
+    function main() {
+        let number;
+        let array = [];
+        number = inputN(number);
+        inputArray(number, array);
+        displayArray(array);
+        document.write("<br>");
+        max(array);
+        document.write("<br>");
+        average(array);
+    }
+    main();
+</script>
+</body>
+</html>

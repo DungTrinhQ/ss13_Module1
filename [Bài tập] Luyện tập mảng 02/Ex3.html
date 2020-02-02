@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    function isInt(num) {
+        if(parseInt(num)==num)
+            return true;
+        return false;
+    }
+    function inputNumber() {
+        let n;
+        do {
+            n = prompt("Moi nhap so nguyen");
+        } while(!isInt(n));
+        return n;
+    }
+    function inputArray() {
+        let arr = [];
+        let n;
+        alert("Nhap do dai marng");
+        do{
+            n = inputNumber();
+        } while(n<=0);
+        alert("Nhap so phan tu cua mang ");
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Phan tu thu "+ (i+1));
+        }
+        return arr;
+    }
+    function countNumber(array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (!isNaN(array[i]))
+                count++;
+        }
+        alert("so ky tu so trong mang la "+count);
+
+    }
+    function main() {
+        let array = inputArray();
+        countNumber(array);
+
+    }
+    main();
+</script>
+</body>
+</html>

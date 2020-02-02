@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CỜ caro cơ bản</title>
+    <style>
+        table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    let bang='<table>';
+    let status='X';
+    function drawTable(n) {
+        for(i=0;i<n;i++){
+            bang+='<tr>';
+            for (j=0;j<n;j++){
+                bang+="<td onclick='displayXO(this.id,"+i+","+j+")' id='id"+i+j+"'></td>"
+            }
+            bang+='</tr>';
+        }bang+='</table>';
+        document.write(bang)}
+    drawTable(9)
+    function displayXO(id,i,j){
+        val=document.getElementById(id);
+        if (val.innerHTML==""){
+            val.innerHTML=status;
+            if (status=='X')
+                status='O';
+            else status='X'
+
+        }
+        checkWin(i,j)
+    }
+
+    function checkWin(xPosition,yPosition){
+        count=1;
+        i=xPosition;
+        j=yPosition;
+        let value=document.getElementById("id"+i+j).innerHTML;
+        while(document.getElementById("id"+i+(j+1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            j++;
+        }
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+i+(j-1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            j--;}
+        count=1;
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i+1)+j).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i++;}
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i-1)+j).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i--;}
+        count=1;
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i-1)+(j+1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i--;j++}
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i+1)+(j-1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i++;j--}
+        count=1;
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i-1)+(j-1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i--;j--}
+        i=xPosition;
+        j=yPosition;
+        while(document.getElementById("id"+(i+1)+(j+1)).innerHTML==value){
+            count++;
+            if(count==5){
+                alert("Winner!!!!");
+                return true;
+            }
+            i++;j++}
+
+    }
+
+</script>
+</body>
+</html>

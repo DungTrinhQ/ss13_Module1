@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex8</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<script>
+    function inputV(V) {
+        do {
+            V = prompt("Nhap so nguyen V: ");
+        } while(isNaN(V)==true);
+        return V;
+
+    }
+
+    function newArray(v,array) {
+        let x = array.indexOf(v)
+        let newArray = [];
+        if(x ===-1)
+            document.write(v+" is not in the array");
+        else {
+            document.write(v+" is in the array");
+            array.splice(x,1);
+            document.write("<br>");
+            document.write("Mang sau khi loai bo " +v+" la ");
+            document.write(array.toString());
+        }
+
+
+    }
+    function main() {
+        let number;
+        let array = [];
+        let v;
+        number = inputN(number);
+        inputArray(number, array);
+        v = inputV(v);
+        displayArray(array);
+        document.write("<br>");
+        newArray(v,array);
+    }
+    main();
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển tiếng Anh</title>
+</head>
+<body>
+<form>
+    Tiếng Anh<input type="text" id="anh" value=""> <button type="button" onclick='translateA()'>Dịch</button>
+
+</form>
+<script>
+    let english= ['hello','good','bad','beautiful'];
+    let vietnam= ['xin chào','tốt','tệ','đẹp'];
+    function translateA() {
+        for (i=0;i<=english.length;i++){
+            if (document.getElementById('anh').value==english[i]){
+                document.write(vietnam[i])
+            }
+        }
+        alert('Không tìm thấy')
+
+    }
+</script>
+</body>
+</html>

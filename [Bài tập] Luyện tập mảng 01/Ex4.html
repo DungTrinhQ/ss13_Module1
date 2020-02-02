@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex4</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên -->
+<!--và đảo ngược các phần tử trong mảng đó.-->
+<script>
+    function reverse(array) {
+        let array2 = array;
+        let first = 0;
+        let last = array2.length -1;
+        while(first<last){
+            let a = array2[first];
+            array2[first] = array2[last];
+            array2[last] = a;
+            first++;
+            last--;
+        }
+        document.write("Dao lai ");
+        displayArray(array2);
+
+    }
+    function main() {
+        let number;
+        let array = [];
+        number = inputN(number);
+        inputArray(number, array);
+        displayArray(array);
+        document.write("<br>");
+        reverse(array);
+    }
+    main();
+</script>
+</body>
+</html>

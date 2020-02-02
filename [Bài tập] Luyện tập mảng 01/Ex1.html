@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. -->
+<!--Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.-->
+
+<script>
+
+    function find10(array) {
+        let n = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i]>=10)
+                n++;
+        }
+        document.write("Mang co "+n+ " so nguyen lon hon hoac bang 10");
+
+    }
+    function main() {
+        let number;
+        let array = [];
+        number = inputN(number);
+        inputArray(number, array);
+        displayArray(array);
+        document.write("<br>");
+        find10(array);
+    }
+    main();
+
+</script>
+</body>
+</html>

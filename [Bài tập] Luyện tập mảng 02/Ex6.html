@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<script>
+    function isInt(num) {
+        if(parseInt(num)==num)
+            return true;
+        return false;
+    }
+    function inputNumber() {
+        let n;
+        do {
+            n = prompt("Moi nhap so nguyen");
+        } while(!isInt(n));
+        return n;
+    }
+    function inputArray() {
+        let arr = [];
+        let n;
+        alert("Nhap do dai marng");
+        do{
+            n = inputNumber();
+        } while(n<=0);
+        alert("Nhap so phan tu cua mang ");
+        for (let i = 0; i < n; i++) {
+            arr[i] = prompt("Phan tu thu "+ (i+1));
+        }
+        return arr;
+    }
+    function replace(array) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == "-")
+                array[i] = "_";
+        }
+        return array;
+    }
+    function displayArray(array) {
+        document.write("Mang vua nhap : ");
+        for (let i = 0; i < array.length; i++) {
+            document.write(array[i] +" ");
+        }
+
+    }
+    function main() {
+        let array = inputArray();
+        array = replace(array);
+        displayArray(array);
+    }
+    main();
+</script>
+</body>
+</html>

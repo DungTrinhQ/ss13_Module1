@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex6</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.-->
+<!--Chương trình tìm xem V có nằm trong mảng số nguyên không? -->
+<!--Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".-->
+
+<script>
+    function inputV(V) {
+        do {
+            V = prompt("Nhap so nguyen V: ");
+        } while(isNaN(V)==true);
+        return V;
+
+    }
+    function findV(v, array) {
+        if(array.includes(v))
+            document.write(v+" is in the array");
+        else
+            document.write(v+" is not in the array");
+    }
+    function main() {
+        let number;
+        let array = [];
+        let v;
+        number = inputN(number);
+        inputArray(number, array);
+        v = inputV(v);
+        displayArray(array);
+        document.write("<br>");
+        findV(v,array);
+    }
+    main();
+</script>
+
+</body>
+</html>

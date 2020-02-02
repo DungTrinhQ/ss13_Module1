@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex2</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. -->
+<!--Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.-->
+<script>
+    function max(array) {
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i])
+                max = array[i];
+        }
+        document.write("phan tu lon nhat mang la "+max);
+    }
+    function main() {
+        let number;
+        let array = [];
+        number = inputN(number);
+        inputArray(number, array);
+        displayArray(array);
+        document.write("<br>");
+        max(array);
+    }
+    main();
+</script>
+
+</body>
+</html>

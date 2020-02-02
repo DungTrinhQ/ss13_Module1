@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex9</title>
+    <script src="InputDisplayArray.js"></script>
+</head>
+<body>
+<script>
+    function main() {
+        let number1, number2;
+        let a = [];
+        let b = [];
+        let c = [];
+        alert("Nhap bang 1 ")
+        number1 = inputN(number1);
+        inputArray(number1, a);
+        alert("Nhap bang 2 ")
+        number2= inputN(number2);
+        inputArray(number2, b);
+        c = a.concat(b);
+        displayArray(a);
+        document.write("<br>");
+        displayArray(b);
+        document.write("<br>");
+        document.write("Mang c la : ")
+        displayArray(c);
+
+
+    }
+    main();
+
+</script>
+</body>
+</html>
